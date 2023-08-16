@@ -1,15 +1,20 @@
 import { useState } from 'react';
 
+
+//Components///
+import Header from '../Componets/Header.jsx';
+import GameBox from '../Componets/GameBox.jsx';
+
 import './App.css';
 
 function App() {
+  
 	const [count, setCount] = useState(0);
 
 	return (
 		<div>
-			<header>
-				<h1>Color Battle</h1>
-			</header>
+		<Header count={count}/>
+    <GameBox setCount={setCount}/>
 		</div>
 	);
 }
